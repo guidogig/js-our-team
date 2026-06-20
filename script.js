@@ -95,13 +95,18 @@ const newMemberImg = formAggiuntaEl.getElementById('inputImg');
 const onFormSubmit = (e) => {
     event.preventDefault();
 
+    /* Questa classe é un modo molto standard per ottenere i dati da un form (event.target é l'elemento form)
+    const formData = new FormData(event.target);
+    const name = formData.get('name');
+    const role = formData.get('role'); 
+    const email = formData.get('email');
+    const img = formData.get('img');*/
+
     const name = newMemberData.newMemberName.value;
     const role = newMemberData.newMemberRole.value;
     const email = newMemberData.newMemberMail.value;
     const img = newMemberData.newMemberImg.value;
-
     const newMember = {name, role, email, img};
-
     teamMembers.push(newMember);
     renderTeam(teamMembers);
 
