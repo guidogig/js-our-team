@@ -69,13 +69,44 @@ const tmplMemberCard = (member) => {
 const teamContainerEl = document.querySelector('.team-container');
 
 const renderTeam = teamMembers => {
+    teamContainerEl.innerHTML = '';
   for (const member of teamMembers) {
     teamContainerEl.innerHTML += tmplMemberCard(member);
   }  
 }
 
+const formAggiuntaEl = document.getElementById('form-aggiunta');
+
+const newMemberData = {
+    newMemberName : formAggiuntaEl.querySelector('#inputName'),
+    newMemberRole : formAggiuntaEl.querySelector('#inputRole'),
+    newMemberMail : formAggiuntaEl.querySelector('#inputMail'),
+    newMemberImg : formAggiuntaEl.querySelector('#inputImg')
+};
+
+/* Metodo alternativo alla creazione di un oggetto newMemberData 
+const newMemberName = formAggiuntaEl.getElementById('inputName');
+const newMemberRole = formAggiuntaEl.getElementById('inputRole');
+const newMemberMail = formAggiuntaEl.getElementById('inputMail');
+const newMemberImg = formAggiuntaEl.getElementById('inputImg'); 
+*/
+
+
+const onFormSubmit = (e) => {
+    event.preventDefault();
+
+    name = newMemberData.newMemberName.value;
+    role = newMemberData.newMemberRole.value;
+    email = newMemberData.newMemberMail.value;
+    img = newMemberData.newMemberImg.value;
+
+    newMember = {name, role, email, img};
+
+    teamMembers.push(newMember);
+    renderTeam(teamMembers);
+
+}
+
+formAggiuntaEl.addEventListener('submit', onFormSubmit);
+
 renderTeam(teamMembers);
-
-
-
-

@@ -24,19 +24,20 @@
         </div>
 
         <div class="team-container">
-
-<!--             <div class="team-card">
-                <div class="card-image">
-                    <img src="assets/img/male1.png" alt="Marco Bianchi" />
-                </div>
-                <div class="card-text">
-                    <h3>Marco Bianchi</h3>
-                    <p>Founder and Ceo</p>
-                    <p>marco.bianchi@team.it</p>
-                </div>
-            </div> -->
-
+            <!-- Cards inserite nel DOM lato js -->
         </div>
+
+        <form id="form-aggiunta">
+            <label for="inputName">Nome Cognome</label>
+            <input type="text" id="inputName" placeholder="Nome e Cognome" required>
+            <label for="inputRole">Ruolo</label>
+            <input type="text" id="inputRole" placeholder="Ruolo" required>
+            <label for="inputMail">Mail</label>
+            <input type="mail" id="inputMail" placeholder="Mail" required>
+            <label for="inputImg">IImmagine</label>
+            <input type="text" id="inputImg" placeholder="Percorso immagine" required>
+            <button type="submit" id="submitBtn">Aggiungi</button>
+        </form>
 
     </div>
 </body>
