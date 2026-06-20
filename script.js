@@ -95,12 +95,12 @@ const newMemberImg = formAggiuntaEl.getElementById('inputImg');
 const onFormSubmit = (e) => {
     event.preventDefault();
 
-    name = newMemberData.newMemberName.value;
-    role = newMemberData.newMemberRole.value;
-    email = newMemberData.newMemberMail.value;
-    img = newMemberData.newMemberImg.value;
+    const name = newMemberData.newMemberName.value;
+    const role = newMemberData.newMemberRole.value;
+    const email = newMemberData.newMemberMail.value;
+    const img = newMemberData.newMemberImg.value;
 
-    newMember = {name, role, email, img};
+    const newMember = {name, role, email, img};
 
     teamMembers.push(newMember);
     renderTeam(teamMembers);
