@@ -38,7 +38,7 @@ const teamMembers = [
 ];
 
 
-const teamListUl = document.getElementById('team-list');
+/* const teamListUl = document.getElementById('team-list');
 
 for (const member of teamMembers) {
   teamListUl.innerHTML += `
@@ -48,4 +48,4 @@ for (const member of teamMembers) {
     <p>Role: ${member.role}</p>
     <p>Mail: ${member.email}</p>
   </li>`;
-}
+} */
