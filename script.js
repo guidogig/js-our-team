@@ -108,6 +108,7 @@ const onFormSubmit = (e) => {
     const img = newMemberData.newMemberImg.value;
     const newMember = {name, role, email, img};
     teamMembers.push(newMember);
+    event.target.reset();
     renderTeam(teamMembers);
 
 }
