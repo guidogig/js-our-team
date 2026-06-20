@@ -42,9 +42,11 @@
     background-color: black;
     color: white;
     flex-basis: 100%;
+    min-width: 280px;
+    max-width: 500px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
     .team-card {
         flex-basis: calc((100% - 50px) / 2);
     }
@@ -67,4 +69,5 @@
 
 .card-image img {
     max-height: 125px;
+    display: block;
 }
